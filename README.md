@@ -1,1 +1,1 @@
-# PythonForFun
+# Small project in python
