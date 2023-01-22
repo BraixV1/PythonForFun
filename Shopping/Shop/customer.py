@@ -17,6 +17,7 @@ class Customer:
         self.name = name
         self.add_money(money)
         self.subscription = subscription
+        self.shoppingcart = list[Product]
         
     def __repr__(self) -> str:
         return f"Name: {self.name}, money: {self.get_money}, subscription: {self.get_subscription}"
@@ -84,3 +85,10 @@ class Customer:
         param: None
         output: float"""
         return self.subscription
+    
+    def get_shopping_cart(self) -> list:
+        """Return shopping cart of the person
+        
+        param: None
+        output: list"""
+        return self.shoppingcart
