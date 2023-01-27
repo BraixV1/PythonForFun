@@ -5,7 +5,7 @@
 
 class Product:
     
-    def __init__(self, name: str, price: float, weight: float, description: str=None, type: str=None) -> None:
+    def __init__(self, name: str, price: float, weight: float, amount: int, description: str=None, product_type: str=None) -> None:
         """Constructor of product class.
         
         param: name
@@ -13,13 +13,15 @@ class Product:
         param: weight
         param: descritpion
         param: type
+        param: amount
         """
         
         self.name = name
         self.set_price(price)
         self.set_weight(weight)
         self.description = description
-        self.type = type
+        self.type = product_type
+        self.amount = amount
         
         
     def __repr__(self) -> str:
@@ -96,6 +98,27 @@ class Product:
             raise ValueError("Weight can't be negative")
         else:
             self.weight = round(weight, 2)
+            
+    def lower_amount(self, amount: int) -> None:
+        """lower the amount the product amount
+        
+        total amount can't be negative
+        param: amount
+        output: none"""
+        if self.amount - amount < 0:
+            print(f"Maximum amount that can be removed is {self.amount}")
+        if self.amount - amount > -1:
+            print(f"Operation successful")
+            self.amount -= amount
+        
+            
+    def higher_amount(self, amount: int) -> None:
+        """Make amount of product avalabile higher
+
+        Args:
+            amount (int): amount to be added to stock
+        """
+            
             
     def get_name(self) -> str:
         """Return product name.

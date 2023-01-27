@@ -35,7 +35,35 @@ class Customer:
         else:
             self.subscribe = True
             
+            
+    def add_cart(self, item: Product, amount: int) -> None:
+        """add item to shopping cart
+        
+        if item already in a shopping cart then increase the amount of the item in shopping cart
+        
+        param: item
+        param: item
+        output: None"""
+        found = False
+        for product in self.shoppingcart:
+            if product.get_name() == item.name:
+                product.amount += amount
+                found = True
+                break
+        if found is False:
+            item
+            self.shoppingcart.append(item)
+        
+            
+            
     
+    
+    def total_cost(self) -> float:
+        """Get sum of all the """
+        solution = 0
+        
+            
+            
     def unsubscribe(self) -> None:
         """Turn subscription off
         
@@ -54,7 +82,7 @@ class Customer:
         param: amount
         output: None"""
         if amount < 0:
-            raise ValueError("for removing money use method {remove_money(amount)}")
+            raise ValueError("for removing money use method <remove_money(amount)>")
         else:
             self.money += amount
             

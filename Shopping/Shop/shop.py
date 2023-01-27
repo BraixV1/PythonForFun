@@ -104,11 +104,28 @@ class Shop:
             self.sale[name] = amount
         raise ValueError("Sale amount can only be between 0 and 100")
             
-    def add_coupon(self, coupun):
-        pass
+    def add_coupon(self, coupun, amount) -> None:
+        """Add copun code to store.
         
-    
-
-    
-    
-             
+        if coupun code is already there ask if user is sure he want's to overwrite the coupun
+        copun gives discount in % so the amount can't be over 100 nor under 0
+        
+        param: coupun
+        param: amount
+        output: None"""
+        
+        if -1 < amount < 101 and coupun in list(self.coupon.keys()):
+            while True:
+                answer = input(f"You are about to overwrite {coupun} sale % are you sure Y/N")
+                if answer.upper() != "N" or answer.upper() != "Y":
+                    print("Incorrect input!")
+                if answer.upper() == "Y":
+                    print("Change successful")
+                    self.coupon[coupun] = amount
+                    break
+                if answer.upper() == "N":
+                    print("Operation aborted")
+                    break
+                
+    def checkout(self):
+        """"""
