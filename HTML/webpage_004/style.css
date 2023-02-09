@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Sofia");
+
+body {
+    background-color: rgb(37, 37, 37);
+    margin: 0;
+    padding: 0;
+    font-family: "Sofia", sans-serif;
+}
+
+.AnimatedButton {
+    background-color: rgba(24, 220, 148, 0.308);
+    height: 25px;
+    width: 70px;
+    transition: all, 1s;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    font-family: "Sofia", sans-serif;
+    border-width: 0px;
+    font-weight: bold;
+    
+}
+
+
+.AnimatedButton:hover {
+    background-color: rgb(0, 255, 145);
+    height: 30px;
+    width: 70px;
+}
+
+.sidebar {
+    width: 72px;
+    height: max-content;
+    background-color: rgba(0, 255, 0, 0.236);
+    border-bottom-right-radius: 25px;
+    transition: all, 0.8s;
+}
+
+.sidebar.expanded {
+    width: 102px;
+}
+
+.AnimatedButton:focus {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 255, 145);
+
+}
+
+
+.animation {
+    height: 100px;
+    background-color: blue;
+    width: 100px;
+    position: relative;
+    margin-left: 50%;
+    transition: all, 5s;
+
+}
+
+.animation:hover {
+    margin-left: 25%;
+}
+
+.animation:focus {
+    background-color: brown;
+}
+
+.icon {
+    margin-left: 35%;
+    margin-bottom: 30px;
+}
