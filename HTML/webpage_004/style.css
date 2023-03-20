@@ -33,6 +33,7 @@ body {
     background-color: rgba(0, 255, 0, 0.236);
     border-bottom-right-radius: 25px;
     transition: all, 0.8s;
+    display: grid;
 }
 
 .sidebar.expanded {
@@ -54,6 +55,7 @@ body {
     position: relative;
     margin-left: 50%;
     transition: all, 5s;
+    margin-bottom: 50%;
 
 }
 
@@ -68,4 +70,49 @@ body {
 .icon {
     margin-left: 35%;
     margin-bottom: 30px;
+}
+
+.opener {
+    width: 30px;
+    height: 30px;
+    margin-left: 80%;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    border-width: 0px;
+    background-color: rgba(0, 0, 0, 0.347);
+    color: rgb(1, 1, 84);
+}
+
+.glowy {
+    margin-left: 50%;
+    margin-bottom: 100px;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+}
+
+.block {
+    width: 20px;
+    height: 10px;
+}
+
+.block:nth-child(1) {
+    margin-left: 120px;
+    margin-bottom: 5px;
+    background-color: green;
+}
+
+.block:nth-child(2) {
+    margin-right: 5px;
+    background-color: black;
+}
+
+.block:nth-child(3) {
+    left: 100%;
+    background-color: brown;
+}
+
+.block:nth-child(4) {
+    left: 100%;
+    background-color: aqua;
 }

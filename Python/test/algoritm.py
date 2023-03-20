@@ -1,4 +1,5 @@
 import math
+import turtle
 def ruutborrand(a, b, c):
     if a == 0:
         if c == 0:
@@ -34,9 +35,12 @@ def Tsykkel():
             else:
                 print("Vahem")
                 sisend = int(input("Proovi uuesti.: "))
+                
+kiirus = 5000
         
+def pikkuse_kontsant():
+    return kiirus
         
-        
-Tsykkel()  
-print(ruutborrand(1, 5, 2)) 
-            
+def bassein(kiirus):
+
+    pikkus = int(23434.5334)  
